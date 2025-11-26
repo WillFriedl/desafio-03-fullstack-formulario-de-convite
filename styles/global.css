@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-logo: "Leckerli One", cursive;
+  --font-primary: "Baloo 2", sans-serif;
+  --font-secondary: "Open Sans", sans-serif;
+  --text-logo: 400 2.5rem/normal var(--font-logo);
+  --text-heading-md: 700 1.75rem/normal var(--font-primary);
+  --text-heading-sm: 700 1.125rem/2 var(--font-primary);
+  --text-body-md-regu: 400 1rem/normal var(--font-secondary);
+  --text-body-md-semi: 600 1rem/normal var(--font-secondary);
+  --text-body-sm-regu: 400 .875rem/normal var(--font-secondary);
+  --text-body-sm-semi: 600 .875rem/normal var(--font-secondary);
+  --text-body-xs-regu: 400 .75rem/normal var(--font-secondary);
+  --text-body-xs-semi: 400 .75rem/normal var(--font-secondary);
+
+  /* Text color */
+  --text-body: #C8CDD0;
+  --text-heading: #f9f9f9;
+
+  /* Shape */
+  --shape-background: #131516;
+  --shape-body: #212427;
+  --shape-button: #2D3136;
+  --shape-hover: #383D42;
+
+  /* Input */
+  --input-base: #1C1F21;
+  --input-stroke: #363B40;
+  --input-placeholder: #869198;
+
+  /* Feedback */
+  --error-danger: #FF5959;
+
+  /* Acent Colors */
+  --acent-purple: #B259FF;
+  --acent-fuschia: #FF59F9;
+  --acent-pink: #FF598B;
+  --acent-orange: #FF8B59;
+  --acent-yellow: #FFCD59;
+  --acent-lime: #E1FF59;
+  --acent-green: #59FF91;
+  --acent-cyan: #59FFF9;
+  --acent-navy: #6A59FF;
+
+  /* Brand */
+  --brand-light: #59B2FF;
+  --brand-mid: #3487CF;
+  --brand-dark: #1D6FB6;
+}
+
+body {
+  overflow: hidden;
+  background-color: var(--shape-background);
+}
+
+aside {
+  h1 {
+    font: var(--text-logo);
+    color: var(--acent-pink);
+  }
+
+ header p {
+    font: var(--text-body-md-regu);
+    color: var(--text-body);
+  }
+}

@@ -1,0 +1,59 @@
+#page {
+  display: grid;
+  grid-template-columns: 27.77% 56.94%;
+  justify-content: center;
+
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 90rem;
+  margin-top: 1.25rem;
+  gap: 1.25rem;
+}
+
+aside {
+  max-width: 25rem;
+  max-height: 45.5rem;
+  overflow: hidden;
+  border-radius: .75rem;
+
+  & .aside-container {
+    position: relative;
+
+    header {
+      position: absolute;
+      padding: 2rem;
+      border-radius: .75rem;
+
+      & img {
+        width: 2.865rem;
+        height: auto;
+      }
+    }
+
+    /* &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+      #212526cc 0%,
+      #212526a6 20%,
+      #2125264d 41%,
+      #2125261a 100%
+      );
+    } */
+
+    & > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+main {
+  display: flex;
+  
+  padding: 5rem 8.125rem;
+  border-radius: .75rem;
+  background-color: var(--shape-body);
+}
