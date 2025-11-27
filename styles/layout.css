@@ -14,7 +14,6 @@ aside {
   max-width: 25rem;
   max-height: 45.5rem;
   overflow: hidden;
-  border-radius: .75rem;
 
   & h1 {
     font: var(--text-logo);
@@ -28,12 +27,12 @@ aside {
     & > img {
         width: 100%;
         height: auto;
+        border-radius: .75rem;
       }
 
     header {
       position: absolute;
       padding: 2rem;
-      border-radius: .75rem;
 
       & p {
       font: var(--text-body-md-regu);
@@ -54,6 +53,7 @@ main {
   padding: 5rem 8.125rem;
   border-radius: .75rem;
   background-color: var(--shape-body);
+  overflow: auto;
 
   & h1 {
     font: var(--text-heading-md);
