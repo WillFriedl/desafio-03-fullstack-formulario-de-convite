@@ -5,9 +5,8 @@
 
   height: 100vh;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 1.25rem auto;
   max-width: 90rem;
-  margin-top: 1.25rem;
   gap: 1.25rem;
 }
 
@@ -17,43 +16,62 @@ aside {
   overflow: hidden;
   border-radius: .75rem;
 
+  & h1 {
+    font: var(--text-logo);
+    color: var(--acent-pink);
+    margin-block: 1rem .25rem;
+  }
+
   & .aside-container {
     position: relative;
+
+    & > img {
+        width: 100%;
+        height: auto;
+      }
 
     header {
       position: absolute;
       padding: 2rem;
       border-radius: .75rem;
 
+      & p {
+      font: var(--text-body-md-regu);
+      color: var(--text-body);
+      }
+
       & img {
         width: 2.865rem;
         height: auto;
       }
-    }
-
-    /* &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-      #212526cc 0%,
-      #212526a6 20%,
-      #2125264d 41%,
-      #2125261a 100%
-      );
-    } */
-
-    & > img {
-      width: 100%;
-      height: auto;
-    }
+    } 
   }
 }
 
 main {
-  display: flex;
-  
+  display: grid;
+  margin-bottom: 1.25rem;
   padding: 5rem 8.125rem;
   border-radius: .75rem;
   background-color: var(--shape-body);
+
+  & h1 {
+    font: var(--text-heading-md);
+    color: var(--text-heading);
+  }
+
+  & legend {
+    font: var(--text-heading-sm);
+    color: var(--text-heading);
+  }
+
+  & label {
+    font: var(--text-body-sm-regu);
+    color: var(--text-body);
+  }
+
+  & .main-container {
+    max-width: 35rem;
+    border: 1px solid red; 
+  }
 }

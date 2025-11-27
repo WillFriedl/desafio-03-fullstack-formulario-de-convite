@@ -1,0 +1,84 @@
+input,
+textarea {
+  position: relative;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  padding: .815rem 1rem ;
+
+  background-color: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  border-radius: .5rem;
+  font: var(--text-body-md-regu);
+  color: var(--text-heading);
+
+  &::placeholder,
+  &:invalid::-webkit-datetime-edit {
+    color: var(--input-placeholder);
+  }
+
+  &:focus-within {
+    border: 1px solid var(--brand-light);
+  }
+
+  
+}
+
+.datetime {
+  display: grid;
+  grid-template-columns: 9rem .1rem auto;
+  align-items: center;
+  margin-top: .75rem;
+
+  background-color: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  border-radius: .5rem;
+  font: var(--text-body-md-regu);
+  color: var(--text-heading);
+  
+  &:focus-within {
+    border: 1px solid var(--brand-light);
+  }
+
+  & input {
+    all: unset;
+    position: relative;
+    padding: .815rem 1rem;
+
+    &[type="date"]::-webkit-calendar-picker-indicator {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 8.9rem;
+      height: 100%;
+      opacity: 0;
+    }
+  
+    &[type="time"]::-webkit-calendar-picker-indicator {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 8rem;
+      height: 100%;
+      opacity: 0;
+    }
+
+    &[type="date"] {
+        text-transform: uppercase;
+      }
+  }
+
+  &:has(input:invalid) span {
+    color: var(--input-placeholder);
+  }
+
+    &:has(input:valid) span {
+      transform: translateX(-100%);
+    }
+}
+
+.input-wrapper > input {
+  margin-top: .75rem;
+}
+
+

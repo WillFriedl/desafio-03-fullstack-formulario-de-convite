@@ -10,7 +10,7 @@
   --font-secondary: "Open Sans", sans-serif;
   --text-logo: 400 2.5rem/normal var(--font-logo);
   --text-heading-md: 700 1.75rem/normal var(--font-primary);
-  --text-heading-sm: 700 1.125rem/2 var(--font-primary);
+  --text-heading-sm: 700 1.125rem/1.25rem var(--font-primary);
   --text-body-md-regu: 400 1rem/normal var(--font-secondary);
   --text-body-md-semi: 600 1rem/normal var(--font-secondary);
   --text-body-sm-regu: 400 .875rem/normal var(--font-secondary);
@@ -56,16 +56,4 @@
 body {
   overflow: hidden;
   background-color: var(--shape-background);
-}
-
-aside {
-  h1 {
-    font: var(--text-logo);
-    color: var(--acent-pink);
-  }
-
- header p {
-    font: var(--text-body-md-regu);
-    color: var(--text-body);
-  }
 }

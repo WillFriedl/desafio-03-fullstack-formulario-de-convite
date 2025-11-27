@@ -1,0 +1,26 @@
+fieldset {
+  border: none;
+
+  & .about-event {
+    display: flex;
+    align-items: center;
+    margin-block: 2.625rem 1.625rem;
+    gap: .75rem;
+  }
+
+  & .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
