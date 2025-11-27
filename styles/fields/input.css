@@ -20,8 +20,6 @@ textarea {
   &:focus-within {
     border: 1px solid var(--brand-light);
   }
-
-  
 }
 
 .datetime {
@@ -72,13 +70,85 @@ textarea {
     color: var(--input-placeholder);
   }
 
-    &:has(input:valid) span {
-      transform: translateX(-100%);
-    }
+  &:has(input:valid) span {
+    transform: translateX(-100%);
+  }
 }
 
 .input-wrapper > input {
   margin-top: .75rem;
+}
+
+.radio-wrapper {
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: .75rem;
+    gap: .25rem;
+  
+    background-color: var(--input-base);
+    border: 1px solid var(--input-stroke);
+    border-radius: .5rem;
+    font: var(--text-body-md-regu);
+    color: var(--text-heading);
+  
+    &:focus-within {
+      border: 1px solid var(--brand-light);
+    }
+
+    & .radio-inner {
+      display: flex;
+      align-items: center;
+      padding: 0.656rem 1.125rem;
+      gap: .5rem;
+      border-radius: .25rem;
+      margin-block: .25rem;
+
+      &:has(:checked) {
+        background-color: var(--shape-button);
+        transition: all .5s ease;
+
+        & label {
+          font: var(--text-body-sm-semi);
+          color: var(--text-heading);
+        }
+
+        & svg path {
+          fill: var(--brand-light);
+        }
+      }
+
+      &:first-child {
+        margin-left: .25rem;
+      }
+
+      &:last-child {
+        margin-right: .25rem;
+      }
+      position: relative;
+
+      & input {
+        all: unset;
+        position: relative;
+
+        /* border: 1px yellow solid; */
+
+        &[type="radio"] {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 8rem;
+          height: 100%;
+          opacity: 100;
+        }
+
+      & label {
+        font: var(--text-body-sm-regu);
+        color: var(--text-body);
+      }
+        
+      }
+    }
 }
 
 
