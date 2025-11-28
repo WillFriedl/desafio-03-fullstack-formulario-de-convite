@@ -51,8 +51,6 @@
       all: unset;
       position: relative;
 
-      /* border: 1px yellow solid; */
-
       &[type="radio"] {
         position: absolute;
         top: 0;
@@ -67,5 +65,90 @@
         color: var(--text-body);
       }
     }
+  }
+}
+
+.bubble-wrapper {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  
+  
+  
+  & .bubble-inner {
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--shape-button) ;
+    margin-top: 1rem;
+    padding: .5rem;
+    position: relative;
+
+    
+
+    & input,
+    & input:focus,
+    & input:hover {
+      all: unset;
+      position: absolute;
+      inset: 0;
+      
+    }
+
+    &:has(:checked) {
+      border: 2px solid var(--brand-light);
+    }
+
+    & div {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+
+      &#brand-light {
+        background-color: var(--brand-light);
+      }
+
+      &#acent-navy {
+        background-color: var(--acent-navy);
+      }
+
+      &#acent-purple {
+        background-color: var(--acent-purple);
+      }
+
+      &#acent-fuschia {
+        background-color: var(--acent-fuschia);
+      }
+
+      &#acent-pink {
+        background-color: var(--acent-pink);
+      }
+
+      &#acent-danger {
+        background-color: var(--error-danger);
+      }
+
+      &#acent-orange {
+        background-color: var(--acent-orange);
+      }
+
+      &#acent-yellow {
+        background-color: var(--acent-yellow);
+      }
+
+      &#acent-lime {
+        background-color: var(--acent-pink);
+      }
+
+      &#acent-green {
+        background-color: var(--acent-green);
+      }
+
+      &#acent-cyan {
+        background-color: var(--acent-cyan);
+      }
+    }
+
   }
 }

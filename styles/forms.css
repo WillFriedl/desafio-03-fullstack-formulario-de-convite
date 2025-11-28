@@ -1,7 +1,7 @@
 fieldset {
   border: none;
 
-  & .about-event {
+  & .section {
     display: flex;
     align-items: center;
     margin-block: 2.625rem 1.625rem;

@@ -88,7 +88,7 @@ fieldset > .input-wrapper,
 
 fieldset {
 
-  & .location-wrapper {
+  & .location-error {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -113,19 +113,19 @@ fieldset {
 
 fieldset.event-info:has(
   .input-wrapper input[id="address"]:not(:focus-within):valid
-  ) .location-wrapper .error,
+  ) .location-error ,
 fieldset.event-info:has(
   .input-wrapper input[id="address"]:focus-within:valid
-  ) .location-wrapper .error,
+  ) .location-error ,
 fieldset.event-info:has(
   .input-wrapper input[id="address"]:focus-within:invalid
-  ) .location-wrapper .error 
+  ) .location-error  
   {
   opacity: 0;
   height: 0;
 }
 
-fieldset.event-info:has(input[id="address"]:placeholder-shown) .location-wrapper .error {
+fieldset.event-info:has(input[id="address"]:placeholder-shown) .location-error  {
   display: none;
 }
 
