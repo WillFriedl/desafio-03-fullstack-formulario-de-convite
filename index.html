@@ -41,17 +41,21 @@
 
             <div class="input-wrapper">
               <label for="event">Título</label>
-              <input type="text" id="event" name="fullname"  placeholder="Nome do evento">
+              <input type="text" id="event" name="fullname" minlength="3" placeholder="Nome do evento" required>
+              <div class="error">
+                <img src="assets/icons/circle-alert.svg" alt="Imagem de um círculo de alerta de erro">
+                <span>Campo obrigatório</span>
+              </div>
             </div>
 
             <div class="grid">
               <div class="input-wrapper">
                 <label for="start-date">Ínicio</label>
                 <div class="datetime">
-                    <input type="date" id="start-date" name="start-date" lang="pt-br" required>
-                    <span>,</span>
-                    <input type="time" id="start-time" name="start-time" lang="pt-br" required>
-                  </div>
+                  <input type="date" id="start-date" name="start-date" lang="pt-br" required>
+                  <span>,</span>
+                  <input type="time" id="start-time" name="start-time" lang="pt-br" required>
+                </div>
               </div>
 
               <div class="input-wrapper">
@@ -61,6 +65,17 @@
                   <span>,</span>
                   <input type="time" id="end-time" name="end-time" lang="pt-br" required>
                 </div>
+              </div>
+            </div>
+
+            <div class="error-wrapper">
+              <div class="error">
+                <img src="assets/icons/circle-alert.svg" alt="Imagem de um círculo de alerta de erro">
+                <span>Campo obrigatório</span>
+              </div>
+              <div class="error">
+                <img src="assets/icons/circle-alert.svg" alt="Imagem de um círculo de alerta de erro">
+                <span>Campo obrigatório</span>
               </div>
             </div>
 
@@ -92,13 +107,24 @@
 
               <div class="input-wrapper">
                 <label for="location">Local</label>
-                <input type="text" id="address" name="address" placeholder="Link ou endereço">
+                <input type="text" id="address" name="address" minlength="3" placeholder="Link ou endereço" required>
+              </div>
+            </div>
+
+            <div class="location-wrapper">
+              <div class="error">
+                <img src="assets/icons/circle-alert.svg" alt="Imagem de um círculo de alerta de erro">
+                <span>Campo obrigatório</span>
               </div>
             </div>
 
             <div class="textarea-wrapper">
               <label for="description">Descrição</label>
-              <textarea name="description" id="description" cols="40" rows="5" placeholder="Escreva sobre os detalhes do evento"></textarea>
+              <textarea name="description" id="description" cols="40" rows="5" minlength="60" placeholder="Escreva sobre os detalhes do evento" required></textarea>
+              <div class="error">
+                <img src="assets/icons/circle-alert.svg" alt="Imagem de um círculo de alerta de erro">
+                <span>Campo obrigatório</span>
+              </div>
             </div>
 
           </fieldset>

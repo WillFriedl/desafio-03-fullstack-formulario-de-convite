@@ -1,0 +1,136 @@
+fieldset > .input-wrapper,
+.textarea-wrapper {
+
+  & input,
+  & textarea {
+    /*Borda aplicada somente quando o input não está em foco e tem erro*/
+    &:not(:focus):not(:placeholder-shown):invalid {
+      border: 1px solid var(--error-danger);
+    }
+
+    /*mensagem de erro aplicada somente quando o input não está em foco*/
+    &:not(:focus):valid + .error,
+    &:focus:valid + .error,
+    &:focus:invalid + .error {
+      display: none;
+    }
+
+    &:placeholder-shown + .error {
+      display: none;
+    }
+  }
+}
+
+& .error {
+  display: flex;
+  align-items: center;
+  margin-top: .5rem;
+  gap: .5rem;
+
+  font: var(--text-body-xs-regu);
+  color: var(--error-danger);
+}
+
+.error-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.grid .datetime {
+
+  /*Borda aplicada somente quando o input não está em foco e tem erro*/
+  &:has(input:valid):has(input:invalid):not(:has(input:focus-within)) {
+    border: 1px solid var(--error-danger);
+  }
+}
+
+  /* Lógica para estabelecer que só irá mostrar a mensagem de erro 
+  quando não em foco e apenas um dos inputs estiver sido marcado */
+.grid:has(
+  .input-wrapper:first-of-type .datetime input[id="start-date"]:valid:not(:focus-within),
+  .input-wrapper:first-of-type .datetime input[id="start-time"]:invalid:not(:focus-within)
+  ):has(
+  .input-wrapper:first-of-type .datetime input[id="start-date"]:invalid:not(:focus-within),
+  .input-wrapper:first-of-type .datetime input[id="start-time"]:valid:not(:focus-within)
+  ) + .error-wrapper .error:first-child,
+.grid:has(
+  .input-wrapper:first-of-type .datetime input[id="start-date"]:focus-within:valid,
+  .input-wrapper:first-of-type .datetime input[id="start-time"]:focus-within:valid
+  ) + .error-wrapper .error:first-child,
+.grid:has(
+  .input-wrapper:first-of-type .datetime input[id="start-date"]:focus-within:invalid,
+  .input-wrapper:first-of-type .datetime input[id="start-time"]:focus-within:invalid
+  ) + .error-wrapper .error:first-child {
+  opacity: 0;
+  height: 0;
+ }
+
+ .grid:has(
+  .input-wrapper:last-of-type .datetime input[id="end-date"]:valid:not(:focus-within),
+  .input-wrapper:last-of-type .datetime input[id="end-time"]:invalid:not(:focus-within)
+  ):has(
+  .input-wrapper:last-of-type .datetime input[id="end-date"]:invalid:not(:focus-within),
+  .input-wrapper:last-of-type .datetime input[id="end-time"]:valid:not(:focus-within)
+  ) + .error-wrapper .error:last-child,
+  .grid:has(
+  .input-wrapper:last-of-type .datetime input[id="end-date"]:focus-within:valid,
+  .input-wrapper:last-of-type .datetime input[id="end-time"]:focus-within:valid
+  ) + .error-wrapper .error:last-child,
+ .grid:has(
+  .input-wrapper:last-of-type .datetime input[id="end-date"]:focus-within:invalid,
+  .input-wrapper:last-of-type .datetime input[id="end-time"]:focus-within:invalid
+  ) + .error-wrapper .error:last-child {
+  opacity: 0;
+  height: 0;
+}
+
+fieldset {
+
+  & .location-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  /* border: 1px solid yellow; */
+
+    & .error {
+      grid-column: 2;
+    }
+  }
+
+  & .input-wrapper:nth-child(2) {
+
+    & > input {
+    /*Borda aplicada somente quando o input não está em foco e tem erro*/
+    &:not(:focus):not(:placeholder-shown):invalid {
+        border: 1px solid var(--error-danger);
+      }
+    }
+  }
+}
+
+fieldset.event-info:has(
+  .input-wrapper input[id="address"]:not(:focus-within):valid
+  ) .location-wrapper .error,
+fieldset.event-info:has(
+  .input-wrapper input[id="address"]:focus-within:valid
+  ) .location-wrapper .error,
+fieldset.event-info:has(
+  .input-wrapper input[id="address"]:focus-within:invalid
+  ) .location-wrapper .error 
+  {
+  opacity: 0;
+  height: 0;
+}
+
+fieldset.event-info:has(input[id="address"]:placeholder-shown) .location-wrapper .error {
+  display: none;
+}
+
+
+
+
+
+

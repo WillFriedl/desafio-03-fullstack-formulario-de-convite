@@ -13,13 +13,13 @@ textarea {
   color: var(--text-heading);
 
   &:-webkit-autofill,
-  &[type="date"]:-webkit-autofill,
-  &[type="time"]:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px var(--input-base) inset;
-    box-shadow: 0 0 0 1000px var(--input-base) inset;
-    -webkit-text-fill-color: var(--text-heading);
-  }
-
+    &[type="date"]:-webkit-autofill,
+    &[type="time"]:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 1000px var(--input-base) inset;
+      box-shadow: 0 0 0 1000px var(--input-base) inset;
+      -webkit-text-fill-color: var(--text-heading);
+    }
+  
   &::placeholder,
   &:invalid::-webkit-datetime-edit {
     color: var(--input-placeholder);
@@ -79,7 +79,7 @@ textarea {
   }
 
   &:has(input:valid) span {
-    transform: translateX(-100%);
+    transform: translateX(-500%);
   }
 }
 
@@ -90,12 +90,13 @@ textarea {
 .textarea-wrapper {
   display: grid;
   margin-top: 1rem;
-  gap: .75rem;
+  
 
   & textarea {
     resize: vertical;
     min-height: 8.5rem;
     max-height: 25rem;
+    margin-top: .75rem;
   }
 }
 
