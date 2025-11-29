@@ -71,6 +71,7 @@
 .bubble-wrapper {
   display: flex;
   align-items: center;
+  margin-top: 1rem;
   gap: .75rem;
   
   
@@ -81,11 +82,8 @@
     height: 2.5rem;
     border-radius: 50%;
     background-color: var(--shape-button) ;
-    margin-top: 1rem;
-    padding: .5rem;
+    padding: .375rem;
     position: relative;
-
-    
 
     & input,
     & input:focus,
@@ -96,8 +94,9 @@
       
     }
 
-    &:has(:checked) {
-      border: 2px solid var(--brand-light);
+    &:has(:checked) div {
+      outline: .125rem solid var(--brand-light);
+      outline-offset: .25rem;
     }
 
     & div {
