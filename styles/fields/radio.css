@@ -69,12 +69,11 @@
 }
 
 .bubble-wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(11, auto);
   align-items: center;
+  justify-content: space-between;
   margin-top: 1rem;
-  gap: .75rem;
-  
-  
   
   & .bubble-inner {
     display: flex;
