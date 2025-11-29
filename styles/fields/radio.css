@@ -73,7 +73,7 @@
   grid-template-columns: repeat(11, auto);
   align-items: center;
   justify-content: space-between;
-  margin-top: 1rem;
+  margin-block: 1rem 1.75rem;
   
   & .bubble-inner {
     display: flex;
@@ -84,13 +84,17 @@
     padding: .375rem;
     position: relative;
 
+    &:hover {
+      background-color: var(--shape-hover);
+      cursor: pointer;
+    }
+
     & input,
     & input:focus,
     & input:hover {
       all: unset;
       position: absolute;
       inset: 0;
-      
     }
 
     &:has(:checked) div {
@@ -149,4 +153,46 @@
     }
 
   }
+}
+
+.theme-radio-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 8.375rem);
+  justify-content: space-between;
+  margin-top: 1rem;
+  gap: .5rem;
+
+  & input,
+  & input:focus,
+  & input:hover {
+    all: unset;
+    position: absolute;
+    inset: 0;
+  }
+
+  & .theme-radio-inner {
+    display: grid;
+    text-align: center;
+    gap: .5rem;
+    padding: .25rem .25rem .5rem;
+    background-color: var(--shape-button);
+    border: 1px solid var(--input-stroke);
+    border-radius: .5rem;
+    position: relative;
+
+    &:hover {
+      background-color: var(--shape-hover);
+      cursor: pointer;
+    }
+
+    &:has(:checked) {
+      outline: .125rem solid var(--brand-light);
+      outline-offset: -.1rem;
+    }
+
+    & img {
+      width: 7.875rem;
+      height: 4rem;
+    }
+    }
 }
