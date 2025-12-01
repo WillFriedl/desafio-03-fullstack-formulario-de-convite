@@ -128,7 +128,7 @@
             </div>
           </fieldset>
 
-          <fieldset class="enroll-colors">
+          <fieldset class="mid-section">
             <div class="section">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -162,7 +162,7 @@
                   <div id="acent-pink"></div>
                 </div>
                 <div class="bubble-inner">
-                  <input type="radio" id="acent-danger" name="bubble">
+                  <input type="radio" id="acent-danger" name="bubble" checked>
                   <div id="acent-danger"></div>
                 </div>
                 <div class="bubble-inner">
@@ -197,7 +197,7 @@
                   <label>Aniversário</label>
                 </div>
                 <div class="theme-radio-inner">
-                  <input type="radio" id="kids" name="theme">
+                  <input type="radio" id="kids" name="theme" checked>
                   <img src="assets/images/kids.png" alt="Imagem de decorações de festa infantil">
                   <label>Infantil</label>
                 </div>
@@ -253,6 +253,35 @@
                 </div>
               </div>
             </div>
+
+            <div class="grid">
+              <div class="input-wrapper">
+                <label for="type">Estilo</label>
+                <div class="option-wrapper">
+                  <div class="radio-wrapper">
+                    <div class="dark">
+                    </div>
+                    
+                    <div class="light">
+                    </div>
+                    <input type="checkbox" id="dark" name="type" value="dark">
+                  </div>
+                  <label>Escuro</label>
+                  <label>Claro</label>
+                </div>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="file">Foto de capa</label>
+
+                <div class="drop-area">
+                  <img src="assets/icons/upload.svg" alt="Ícone de upload de arquivo">
+                  <label>Selecionar</label>
+                  <input type="file" id="file" name="file" required>
+                </div>
+              </div>
+            </div>
+            
           </fieldset>
         </form>
       </div>

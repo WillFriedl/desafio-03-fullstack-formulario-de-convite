@@ -100,4 +100,50 @@ textarea {
   }
 }
 
+.mid-section {
+
+  & .grid {
+
+    & .input-wrapper {
+      align-items: center;
+    }
+
+    & .input-wrapper:last-child {
+      position: relative;
+
+      & input::file-selector-button {
+        all: unset;
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+
+      }
+      
+      & input {
+        all: unset;
+        margin-left: 1rem;
+        font: var(--text-body-md-regu);
+        color: var(--input-placeholder);
+      }
+      
+      & .drop-area {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        width: 8rem;
+        gap: .5rem;
+        background-color: var(--shape-button);
+        border-radius: .5rem;
+        padding: .75rem;
+        cursor: pointer;
+
+        & label {
+          margin-right: .75rem;
+          font: var(--text-body-md-semi);
+          color: var(--text-heading);
+        }
+      }
+    }
+  }
+}
 
