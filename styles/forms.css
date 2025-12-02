@@ -15,8 +15,74 @@ fieldset {
     margin-top: 1rem;
     gap: 1rem;
   }
+}
+
+.terms {
+  display: grid;
+  margin-top: 3rem;
+  padding-top: 2.75rem ;
+  border-top: 1px solid var(--input-stroke);
+  gap: .75rem;
+  margin-bottom: 3rem;
+
+  & label {
+    font: var(--text-body-sm-regu);
+    color: var(--text-body);
+  }
+
+  & strong {
+    font: var(--text-body-sm-semi);
+    color: var(--brand-light);
+  }
+
+  & input,
+  & input:focus {
+    all: unset;
+    inset: 0;
+    width: 1rem;
+    height: 1rem;
+
+    background-color: var(--input-base);
+    border: 1px solid var(--input-stroke);
+    border-radius: .25rem;
+    
+    &[type="checkbox"]:checked {
+      border: 1px solid var(--brand-light);
+      background-image: url(../../assets/icons/check.svg);
+    }
+  }
+
+  & div {
+    display: flex;
+    align-items: center;
+    gap: .875rem;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
   
+  & button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    border: none;
+    border-radius: .5rem;
+    padding: .8125rem 1.25rem;
+    background-color: var(--brand-dark);
+    font: var(--text-body-md-semi);
+    color: var(--text-heading);
+
+    & img {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+  }
 }
 
 

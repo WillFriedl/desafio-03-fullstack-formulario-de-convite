@@ -3,8 +3,6 @@
   grid-template-columns: 27.77% 56.94%;
   justify-content: center;
 
-  height: 100vh;
-  overflow: hidden;
   margin: 1.25rem auto;
   max-width: 90rem;
   gap: 1.25rem;
@@ -50,12 +48,12 @@ aside {
 main {
   display: grid;
   max-width: 51.25rem;
-  margin-bottom: 1.25rem;
   padding: 5rem 8.125rem;
   border-radius: .75rem;
   background-color: var(--shape-body);
   overflow-y: auto;
   overflow-x: hidden;
+  margin-bottom: 1.25rem;
 
   & h1 {
     font: var(--text-heading-md);
@@ -74,6 +72,5 @@ main {
 
   & .main-container {
     max-width: 35rem;
-    /* border: 1px solid red;  */
   }
 }

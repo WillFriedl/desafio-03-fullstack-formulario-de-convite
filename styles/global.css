@@ -54,6 +54,7 @@
 }
 
 body {
-  overflow: hidden;
+  overflow: auto;
   background-color: var(--shape-background);
+  height: 100vh;
 }

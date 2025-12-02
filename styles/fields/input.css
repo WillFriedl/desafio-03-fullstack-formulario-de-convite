@@ -109,6 +109,7 @@ textarea {
     }
 
     & .input-wrapper:last-child {
+      margin-top: .1875rem;
       position: relative;
 
       & input::file-selector-button {
@@ -137,6 +138,7 @@ textarea {
         padding: .75rem;
         cursor: pointer;
 
+
         & label {
           margin-right: .75rem;
           font: var(--text-body-md-semi);
@@ -146,4 +148,6 @@ textarea {
     }
   }
 }
+
+
 

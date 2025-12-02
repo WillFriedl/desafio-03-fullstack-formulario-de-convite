@@ -132,5 +132,38 @@ fieldset.event-info:has(input[id="address"]:placeholder-shown) .location-error  
 
 
 
+.contact {
+
+  & .grid {
+
+    & input {
+      /*Borda aplicada somente quando o input não está em foco e tem erro*/
+      &[type="mail"]:not(:focus):not(:placeholder-shown):invalid {
+        border: 1px solid var(--error-danger);
+      } 
+    }
+  }
+}
+
+fieldset.contact:has(input[type="mail"]:placeholder-shown) .error-wrapper .error:first-child,
+fieldset.contact:has(input[type="tel"]:placeholder-shown) .error-wrapper .error:last-child   {
+  opacity: 0;
+  height: 0;
+}
+
+fieldset.contact:has(input[type="mail"]:not(:focus):not(:placeholder-shown):valid) .error-wrapper .error:first-child,
+fieldset.contact:has(input[type="mail"]:focus:not(:placeholder-shown):valid) .error-wrapper .error:first-child,
+fieldset.contact:has(input[type="mail"]:focus:not(:placeholder-shown):invalid) .error-wrapper .error:first-child,
+fieldset.contact:has(input[type="tel"]:not(:focus):not(:placeholder-shown):valid) .error-wrapper .error:last-child,
+fieldset.contact:has(input[type="tel"]:focus:not(:placeholder-shown):valid) .error-wrapper .error:last-child,
+fieldset.contact:has(input[type="tel"]:focus:not(:placeholder-shown):invalid) .error-wrapper .error:last-child   {
+  opacity: 0;
+  height: 0;
+}
+
+
+
+
+
 
 
